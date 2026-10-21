@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f3ed;
+  color: #3e2723;
+}
+
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  border: none;
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+  color: #6f4e37;
+}
+
+button {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4e342e;
+}
+
+.coffee-card {
+  background-color: white;
+  padding: 20px;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.coffee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.coffee-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #6f4e37;
+}
+
+.coffee-card p {
+  font-size: 18px;
+  margin: 8px 0 14px;
+}
+
+.coffee-card button {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 16px;
+  transition: background-color 0.3s;
+}
+
+.coffee-card button:hover {
+  background-color: #5a3e2b;
+}
+
+.coffee-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #3e2723;
+}
+
+h1 {
+  text-align: center;
+  color: #6f4e37;
+}
+
+.order-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+
+
+.order-count {
+  background-color: #6f4e37;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 8pxpx;
+}
+
+.quantity-btn {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #ede4da;
+  color: black;
+}
+
+.quantity-btn:hover{
+  background-color:#ede4da ;
+}
+.quantity {
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.order-item {
+  background-color: #ede4da;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  margin: 15px;
+}
+
+.order-name {
+  flex: 1;
+  margin: 0;
+  font-weight: bold;
+}
+
+.order-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.order-price {
+  margin: 0 0 0 12px;
+  text-align: right;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.order-list{
+  background-color: #ede4da;
+  border-radius: 12px;
+  margin: 15px 0;
+  padding: 5px 5px;
+}
+
+.order-item + .order-item {
+  border-top: 1px solid #d6c9bc;
+}
+
+.coffee-card {
+  width: 100%;
+  max-width: 280px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d6c9bc;
+  border-radius: 8px;
+  background-color: #f1eae4;
+}
+
+.search-box button {
+  white-space: nowrap;
+}
+
+.clear-Order-btn,
+.place-order-btn{
+  display: block;
+  width: 200px;
+  margin: 5px auto;
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 16px;
+  }
+
+  .coffee-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .coffee-card {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .coffee-card img {
+    height: 140px;
+  }
+
+  .order-heading {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .order-item {
+    margin: 8px 0;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .order-quantity {
+    gap: 6px;
+  }
+
+  .search-box input {
+    min-width: 0;
+  }
+}
