@@ -1,10 +1,30 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 const coffees = [
-  { id: 1, name: "Latte", price: 15, image: "/images/latte.jpg" },
-  { id: 2, name: "Espresso", price: 10, image: "/images/espresso.jpg" },
-  { id: 3, name: "Cappuccino", price: 14, image: "/images/cappuccino.jpg" },
-  { id: 4, name: "Americano", price: 20, image: "/images/americano.jpg" },
+  {
+    id: 1,
+    name: "Latte",
+    price: 15,
+    image: `${import.meta.env.BASE_URL}images/latte.jpg`,
+  },
+  {
+    id: 2,
+    name: "Espresso",
+    price: 10,
+    image: `${import.meta.env.BASE_URL}images/espresso.jpg`,
+  },
+  {
+    id: 3,
+    name: "Cappuccino",
+    price: 14,
+    image: `${import.meta.env.BASE_URL}images/cappuccino.jpg`,
+  },
+  {
+    id: 4,
+    name: "Americano",
+    price: 20,
+    image: `${import.meta.env.BASE_URL}images/americano.jpg`,
+  },
 ];
 
 function Welcome(props) {
